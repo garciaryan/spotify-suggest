@@ -6,6 +6,7 @@
         <span class="font-weight-light">Suggest</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <SideNav />
     </v-toolbar>
 
     <v-content>
@@ -16,11 +17,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import SideNav from './components/SideNav'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    SideNav
   },
   data () {
     return {
