@@ -11,21 +11,20 @@
 
     <v-content>
       <RecentlyPlayed />
+      <Settings />
     </v-content>
   </v-app>
 </template>
 
 <script>
-// import SideNav from './components/SideNav'
 import RecentlyPlayed from './components/RecentlyPlayed'
-// import Suggestions from './components/Suggestions'
+import Settings from './components/Settings'
 
 export default {
   name: 'App',
   components: {
-    //SideNav,
     RecentlyPlayed,
-    //Suggestions
+    Settings
   },
   data () {
     return {
