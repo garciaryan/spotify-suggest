@@ -5,8 +5,6 @@
       <v-toolbar-title class="headline text-uppercase">
         <span class="font-weight-light">Suggest</span>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
 
     <v-content>
@@ -28,7 +26,7 @@ export default {
   },
   data () {
     return {
-      drawer: false
+
     }
   }
 }

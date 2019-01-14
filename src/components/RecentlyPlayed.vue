@@ -6,8 +6,8 @@
           <v-card color="blue-gray" class="white--text">
             <v-card-title primary-title>
                 <div>
-                  <div class="headline">Unlimited music now</div>
-                  <span>Listen to your favorite artists and albums whenever and wherever, online and offline.</span>
+                  <div class="headline">Recently Played</div>
+                  <span></span>
                 </div>
               </v-card-title>
               <v-card-actions>

@@ -1,10 +1,10 @@
 <template>
   <v-flex xs6>
     <v-card>
-      <v-toolbar color="teal" dark>
+      <v-toolbar color="#1DB954" dark>
         <v-toolbar-side-icon></v-toolbar-side-icon>
 
-        <v-toolbar-title class="text-xs-center">New Chat</v-toolbar-title>
+        <v-toolbar-title class="text-xs-center">For You</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -19,7 +19,6 @@
           v-for="item in items"
           :key="item.title"
           avatar
-          @click=""
         >
           <v-list-tile-avatar>
             <img :src="item.avatar">
@@ -44,7 +43,6 @@
           v-for="item in items2"
           :key="item.title"
           avatar
-          @click=""
         >
           <v-list-tile-avatar>
             <img :src="item.avatar">
