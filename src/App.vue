@@ -6,28 +6,30 @@
         <span class="font-weight-light">Suggest</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <SideNav />
+      <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <RecentlyPlayed />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import SideNav from './components/SideNav'
+// import SideNav from './components/SideNav'
+import RecentlyPlayed from './components/RecentlyPlayed'
+// import Suggestions from './components/Suggestions'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    SideNav
+    //SideNav,
+    RecentlyPlayed,
+    //Suggestions
   },
   data () {
     return {
-      //
+      drawer: false
     }
   }
 }

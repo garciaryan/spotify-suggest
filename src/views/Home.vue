@@ -1,13 +1,18 @@
 <template>
-  <HelloWorld />
+  <div>
+    <RecentlyPlayed />
+    <Suggestions />
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import RecentlyPlayed from '../components/RecentlyPlayed'
+import Suggestions from '../components/Suggestions'
 
   export default {
     components: {
-      HelloWorld
+      RecentlyPlayed,
+      Suggestions
     }
   }
 </script>
