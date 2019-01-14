@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-container fluid grid-list-lg row>
+    <v-container fluid grid-list-lg>
       <v-layout>
         <v-flex xs6>
           <v-card color="blue-gray" class="white--text">
@@ -15,8 +15,8 @@
               </v-card-actions>
           </v-card>
         </v-flex>
+        <Suggestions />
       </v-layout>
-      <Suggestions />
     </v-container>
   </v-card>
   
