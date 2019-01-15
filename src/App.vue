@@ -17,6 +17,7 @@
 <script>
 import RecentlyPlayed from './components/RecentlyPlayed'
 import Settings from './components/Settings'
+import SpotifyWebApi from 'spotify-web-api-node';
 
 export default {
   name: 'App',
@@ -28,6 +29,21 @@ export default {
     return {
 
     }
+  },
+  created(){
+    let scopes = ['user-read-private', 'user-read-email'],
+      redirectUri = 'https://example.com/callback',
+      clientId = process.env.VUE_APP_CLIENT_ID,
+      state = '';
+
+    // Setting credentials can be done in the wrapper's constructor, or using the API object's setters.
+    let spotifyApi = new SpotifyWebApi({
+      redirectUri: redirectUri,
+      clientId: clientId
+    });
+
+    // Create the authorization URL
+    let authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);
   }
 }
 </script>

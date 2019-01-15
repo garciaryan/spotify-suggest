@@ -32,6 +32,12 @@ export default {
     }
   },
 
+  methods: {
+    getRecentTracks(){
+      
+    }
+  },
+
   components: {
     Suggestions
   }
