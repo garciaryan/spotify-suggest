@@ -9,6 +9,7 @@
 
     <v-content>
       <RecentlyPlayed />
+      <Authorize v-if="loggedIn === false" />
       <Settings />
     </v-content>
   </v-app>
@@ -17,17 +18,19 @@
 <script>
 import RecentlyPlayed from './components/RecentlyPlayed'
 import Settings from './components/Settings'
+import Authorize from './components/Authorize'
 import SpotifyWebApi from 'spotify-web-api-node';
 
 export default {
   name: 'App',
   components: {
     RecentlyPlayed,
-    Settings
+    Settings,
+    Authorize
   },
   data () {
     return {
-
+      loggedIn: false,
     }
   },
   created(){
@@ -43,7 +46,7 @@ export default {
     });
 
     // Create the authorization URL
-    let authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);
+    this.$store.state.authUrl = spotifyApi.createAuthorizeURL(scopes, state);
   }
 }
 </script>
