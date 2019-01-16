@@ -5,14 +5,17 @@
         <v-flex xs6>
           <v-card color="blue-gray" class="white--text">
             <v-card-title primary-title>
-                <div>
-                  <div class="headline">Recently Played</div>
-                  <span></span>
-                </div>
-              </v-card-title>
-              <v-card-actions>
-                <v-btn flat dark>Listen now</v-btn>
-              </v-card-actions>
+              <v-flex>
+                <v-text-field
+                  label="Songs/Artists"
+                  dark
+                  color="#1DB954"
+                ></v-text-field>
+              </v-flex>
+            </v-card-title>
+            <v-card-actions>
+              <v-btn flat dark>Search</v-btn>
+            </v-card-actions>
           </v-card>
         </v-flex>
         <Suggestions />
@@ -28,7 +31,7 @@ import Suggestions from '@/components/Suggestions'
 export default {
   data(){
     return {
-
+      search: ''
     }
   },
 

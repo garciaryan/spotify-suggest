@@ -2,15 +2,7 @@
   <v-flex xs6>
     <v-card>
       <v-toolbar color="#1DB954" dark>
-        <v-toolbar-side-icon></v-toolbar-side-icon>
-
-        <v-toolbar-title class="text-xs-center">For You</v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
-        <v-btn icon>
-          <v-icon>search</v-icon>
-        </v-btn>
+        <v-toolbar-title class="text-xs-center">Related</v-toolbar-title>
       </v-toolbar>
 
       <v-list subheader>
