@@ -4,7 +4,7 @@
       <v-layout>
         <v-flex xs6>
           <v-card color="blue-gray" class="white--text">
-            <v-card-title primary-title>
+            <v-card-title>
               <v-flex>
                 <v-text-field
                   label="Songs/Artists"
@@ -14,7 +14,7 @@
               </v-flex>
             </v-card-title>
             <v-card-actions>
-              <v-btn flat dark>Search</v-btn>
+              <v-btn flat dark @click="getRecentTracks">Search</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -37,7 +37,6 @@ export default {
 
   methods: {
     getRecentTracks(){
-      
     }
   },
 

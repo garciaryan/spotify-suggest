@@ -30,12 +30,12 @@ export default {
   },
   data () {
     return {
-      loggedIn: false,
+      loggedIn: this.$store.state.loggedIn,
     }
   },
   created(){
     let scopes = ['user-read-private', 'user-read-email'],
-      redirectUri = 'https://example.com/callback',
+      redirectUri = 'http:/localhost:8080/callback',
       clientId = process.env.VUE_APP_CLIENT_ID,
       state = '';
 
@@ -47,6 +47,6 @@ export default {
 
     // Create the authorization URL
     this.$store.state.authUrl = spotifyApi.createAuthorizeURL(scopes, state);
-  }
+  },
 }
 </script>
