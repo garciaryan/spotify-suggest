@@ -37,16 +37,19 @@ export default {
     let scopes = ['user-read-private', 'user-read-email'],
       redirectUri = 'http:/localhost:8080/callback',
       clientId = process.env.VUE_APP_CLIENT_ID,
+      response_type = 'code',
       state = '';
 
     // Setting credentials can be done in the wrapper's constructor, or using the API object's setters.
     let spotifyApi = new SpotifyWebApi({
       redirectUri: redirectUri,
-      clientId: clientId
+      clientId: clientId,
+      response_type: response_type
     });
 
     // Create the authorization URL
     this.$store.state.authUrl = spotifyApi.createAuthorizeURL(scopes, state);
+    
   },
 }
 </script>
