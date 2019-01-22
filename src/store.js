@@ -6,10 +6,13 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     authUrl: '',
-    loggedIn: false
+    loggedIn: false,
+    code: ''
   },
   mutations: {
-
+    logIn(state){
+      state.loggedIn = true;
+    }
   },
   actions: {
 

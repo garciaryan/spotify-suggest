@@ -11,11 +11,11 @@ export default {
   
   data(){
     return {
-      url: this.$store.state.authUrl,
-      code: window.location.href.split('code=')[1]
+      url: this.$store.state.authUrl
     }
   },
 
+  //no async code in computed props i.e no axios.post
   computed: {
     accessToken(){
       if (this.$store.state.loggedIn === true){
@@ -37,6 +37,9 @@ export default {
       } else {
         console.log('not logged in');
       }
+    },
+    logInCode(){
+      return this.$store.state.code = window.location.href.split('code=')[1];
     }
   }
 }

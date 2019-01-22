@@ -30,7 +30,7 @@ export default {
   },
   data () {
     return {
-      loggedIn: this.$store.state.loggedIn,
+
     }
   },
   created(){
@@ -51,5 +51,15 @@ export default {
     this.$store.state.authUrl = spotifyApi.createAuthorizeURL(scopes, state);
     
   },
+
+  computed: {
+    loggedIn(){
+      if(this.$store.state.code){
+        return this.$store.commit('logIn');
+      } else {
+        return this.$store.state.loggedIn;
+      }
+    }
+  }
 }
 </script>
