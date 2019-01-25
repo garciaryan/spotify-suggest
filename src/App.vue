@@ -55,6 +55,7 @@ export default {
   computed: {
     loggedIn(){
       if(this.$store.state.code){
+        this.$store.dispatch('accessToken');
         return this.$store.commit('logIn');
       } else {
         return this.$store.state.loggedIn;
